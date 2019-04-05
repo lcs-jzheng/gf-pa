@@ -1,11 +1,11 @@
 #Greenfoot project file
 class.Car.image=car01-n.png
 class.RaceTrack.image=Background.png
-editor.fx.0.height=806
+editor.fx.0.height=798
 editor.fx.0.width=1440
 editor.fx.0.x=0
 editor.fx.0.y=22
-height=806
+height=798
 package.numDependencies=0
 package.numTargets=2
 project.charset=UTF-8

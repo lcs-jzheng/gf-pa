@@ -14,12 +14,29 @@ public class Car extends Actor
      */
     public Car()
     {  
+        // Change the size of the actor
         GreenfootImage image = getImage();
-        image.scale(image.getWidth() - 20, image.getHeight() - 40);
+        image.scale(image.getWidth() - 40, image.getHeight() - 20);
         setImage(image);
     }
     public void act() 
     {
-        // Add your action code here.
+        if (Greenfoot.isKeyDown("left"))
+    {
+        turn(-3);
+    }
+    if (Greenfoot.isKeyDown("right"))
+    {
+        turn(3);
+    }
+    if (Greenfoot.isKeyDown("up"))
+    {
+        move(2);
+     
+    }
+    if(Greenfoot.isKeyDown("down"))
+    {
+        move(-1);
+    }
     }    
 }
