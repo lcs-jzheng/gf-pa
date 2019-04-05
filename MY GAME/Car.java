@@ -38,5 +38,6 @@ public class Car extends Actor
     {
         move(-1);
     }
+    
     }    
 }
