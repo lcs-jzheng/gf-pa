@@ -24,7 +24,7 @@ public class RaceTrack extends World
     if ((frames % 60) == 0)
         {
             String timeElapsed = Integer.toString(frames / 60);
-            showText(timeElapsed, 100, 50);
+            showText(timeElapsed, 100, 200);
         }
         
         // Increment frame (roughly 60 frames per second)
@@ -799,6 +799,8 @@ public class RaceTrack extends World
         invisibleWall265.setLocation(368,214);
         InvisibleWall invisibleWall266 = new InvisibleWall();
         addObject(invisibleWall266,368,214);
+        startpoint startpoint = new startpoint();
+        addObject(startpoint,299,360);
     }
     
 }
