@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Car extends Actor
 {
     private int currentSpeed;
-    
+    public int Lap = 0;
     
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
@@ -40,6 +40,7 @@ public class Car extends Actor
         {
             currentSpeed = 3;
         }
+        
     }
   
     private void Movement()
