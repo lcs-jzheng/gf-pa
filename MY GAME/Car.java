@@ -30,7 +30,10 @@ public class Car extends Actor
     public void act() 
     {
         //Movement using arrows keys
+        
         Movement();
+        //Play the cringe sound continuosly so it sounds like the engine. Very Awful but funny.
+        Greenfoot.playSound("Vroom.wav");
         //Change the speed when it is touching the Invisible wall
         if(isTouching(InvisibleWall.class) == true)
         {
@@ -56,7 +59,7 @@ public class Car extends Actor
         if (Greenfoot.isKeyDown("up"))
         {
             move(currentSpeed);
-
+            
         }
         if(Greenfoot.isKeyDown("down"))
         {
