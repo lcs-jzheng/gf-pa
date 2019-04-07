@@ -801,7 +801,7 @@ public class RaceTrack extends World
         InvisibleWall invisibleWall266 = new InvisibleWall();
         addObject(invisibleWall266,368,214);
         startpoint startpoint = new startpoint();
-        addObject(startpoint,269,360);
+        addObject(startpoint,299,360);
         
     }
 

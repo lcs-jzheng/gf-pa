@@ -13,20 +13,25 @@ public class startpoint extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public int Lap = 0;
-    
+
     public void act() 
     {
         //add lap if the car touched
-       
+
         if(isTouching(Car.class))
         {
             Lap = Lap + 1;
-            if ((Lap % 30) == 0)
+            if ((Lap % 40) == 0)
             {
-                String lap = Integer.toString(Lap / 30);
+                String lap = Integer.toString(Lap / 40);
 
                 getWorld().showText(lap, 450, 30);
+                getWorld().showText("Lap:", 400, 30);
             }
         }    
+        if (Lap == 170)
+        {Greenfoot.stop();
+         getWorld().showText("GameOver",250,250);
+        }
     }
 }
