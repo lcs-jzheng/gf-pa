@@ -29,7 +29,7 @@ public class startpoint extends Actor
                 getWorld().showText("Lap:", 400, 30);
             }
         }    
-        if (Lap == 170)
+        if (Lap == 158)
         {Greenfoot.stop();
          getWorld().showText("GameOver",250,250);
         }
