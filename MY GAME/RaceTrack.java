@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class RaceTrack extends World
 {
     //Frames to count the time
+    
+    private Car Car;
     private int frames = 0;
-     private Car Car;
     
     public RaceTrack()
     {    
@@ -18,28 +19,28 @@ public class RaceTrack extends World
         super(500, 500, 1); 
         prepare();
     }
-    public void Act()
-    
+
+    public void act()
+
     {
-    if ((frames % 60) == 0)
-        {
-            String timeElapsed = Integer.toString(frames / 60);
-            showText(timeElapsed, 100, 200);
-        }
-        
+       //
+       
         // Increment frame (roughly 60 frames per second)
         frames = frames + 1;
+
+        if ((frames % 60) == 0)
+        {
+            String timeElapsed = Integer.toString(frames / 60);
+            showText("Time:", 45, 30);
+            showText(timeElapsed, 90, 30);
+        }
+
         
+
         
-        //Stopping the game at 60 seconds
-        
-        
-        
-        
+
       
-    
     }
-    
     
     /**
      * Prepare the world for the start of the program.
@@ -802,5 +803,5 @@ public class RaceTrack extends World
         startpoint startpoint = new startpoint();
         addObject(startpoint,299,360);
     }
-    
+
 }
