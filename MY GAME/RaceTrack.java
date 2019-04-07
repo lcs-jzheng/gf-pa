@@ -49,7 +49,7 @@ public class RaceTrack extends World
     {
         // Create the kid in the middle of the screen
         Car = new Car();
-        this.addObject(Car, 275, 360);
+        this.addObject(Car, 265, 360);
 
         InvisibleWall invisibleWall = new InvisibleWall();
         addObject(invisibleWall,30,175);
