@@ -23,11 +23,11 @@ public class RaceTrack extends World
     public void act()
 
     {
-       //
+       
        
         // Increment frame (roughly 60 frames per second)
         frames = frames + 1;
-
+        //added in time shows
         if ((frames % 60) == 0)
         {
             String timeElapsed = Integer.toString(frames / 60);
@@ -39,7 +39,9 @@ public class RaceTrack extends World
 
         
 
-      
+        
+        
+           
     }
     
     /**

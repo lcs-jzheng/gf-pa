@@ -21,15 +21,15 @@ public class startpoint extends Actor
         if(isTouching(Car.class))
         {
             Lap = Lap + 1;
-            if ((Lap % 40) == 0)
+            if ((Lap % 11) == 0)
             {
-                String lap = Integer.toString(Lap / 40);
+                String lap = Integer.toString(Lap / 11);
 
                 getWorld().showText(lap, 450, 30);
                 getWorld().showText("Lap:", 400, 30);
             }
         }    
-        if (Lap == 158)
+        if (Lap == 47)
         {Greenfoot.stop();
          getWorld().showText("GameOver",250,250);
         }
