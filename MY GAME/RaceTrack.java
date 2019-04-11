@@ -9,24 +9,41 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class RaceTrack extends World
 {
     //Frames to count the time
-    
+    private GreenfootImage image1;
+    private GreenfootImage image2;
     private Car Car;
     private int frames = 0;
-    
+
     public RaceTrack()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 500x500 cells with a cell size of 1x1 pixels.
         super(500, 500, 1); 
+        //There are two images to switch, one is the cover page and the other is the race track.
+        image1 = new GreenfootImage("first_image.png");
+        image2 = new GreenfootImage("Background.png");
+        setBackground(image1);
+        if(getBackground() == image1)
+        {frames = 0;
+
+        }
         prepare();
     }
 
     public void act()
 
     {
-       
-       
-        // Increment frame (roughly 60 frames per second)
-        frames = frames + 1;
+        //If space is pressed it will change to image 2
+        if (Greenfoot.isKeyDown("space"))
+        {
+            setBackground(image2);   
+        }
+        if(getBackground() == image2)
+        {
+            // Increment frame (roughly 60 frames per second)
+
+            frames = frames + 1;
+
+        }    
         //added in time shows
         if ((frames % 60) == 0)
         {
@@ -35,21 +52,14 @@ public class RaceTrack extends World
             showText(timeElapsed, 90, 30);
         }
 
-        
 
-        
-
-        
-        
-           
     }
-    
     /**
      * Prepare the world for the start of the program.
      */
     private void prepare()
     {
-        // Create the kid in the middle of the screen
+        // Create the car in the middle of the track
         Car = new Car();
         this.addObject(Car, 265, 360);
 
@@ -804,7 +814,7 @@ public class RaceTrack extends World
         addObject(invisibleWall266,368,214);
         startpoint startpoint = new startpoint();
         addObject(startpoint,299,360);
-        
+
     }
 
 }

@@ -16,7 +16,7 @@ public class startpoint extends Actor
 
     public void act() 
     {
-        //add lap if the car touched
+        //add lap if the car touched, approximatly the time that will be after 3 laps, it will stop itself.
 
         if(isTouching(Car.class))
         {
